@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import './App.css'
 import Perfil from './components/Perfil';
 import Persona from './components/Persona'
 import TarjetaPelicula from './components/TarjetaPelicula';
+import Acordeon from './components/Acordeon';
 
 const peliculas = [
   { id: 1, titulo: "Interstellar",     año: 2014, vista: false },
@@ -11,6 +13,7 @@ const peliculas = [
 ];
 
 function App() {
+  const [cuenta, setCuenta]= useState(0)
   return(
     <>
     <h1>Ejercicio 1</h1>
@@ -31,6 +34,19 @@ function App() {
     titulo={pelicula.titulo}
     año={pelicula.año}
     vista={pelicula.vista}/>))}
+
+    <h1>Ejercicio 4</h1>
+    <h2>Contador: </h2>
+    <div>
+      <p>{cuenta}</p>
+      <button onClick={ () => setCuenta (cuenta + 1) }>Sumar</button>
+      <button onClick={ () => cuenta  > 0 ? setCuenta (cuenta - 1) : (cuenta)}>Restar</button>
+      <button onClick={ () => setCuenta(0) }>Reiniciar</button>
+    </div>
+
+    <h1>Ejercicio 5</h1>
+    <Acordeon titulo="Hello Kity" contenido= "Gato"/>
+    
     </>
   );
 }
