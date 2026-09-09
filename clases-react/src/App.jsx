@@ -4,6 +4,8 @@ import Perfil from './components/Perfil';
 import Persona from './components/Persona'
 import TarjetaPelicula from './components/TarjetaPelicula';
 import Acordeon from './components/Acordeon';
+import Buscador from './components/Buscador';
+import AppCompras from './components/AppCompras';
 
 const peliculas = [
   { id: 1, titulo: "Interstellar",     año: 2014, vista: false },
@@ -47,7 +49,13 @@ function App() {
     <h1>Ejercicio 5</h1>
     <Acordeon titulo="Hello Kity" contenido= "Gato"/>
     
+    <h1>Ejercicio 6</h1>
+    <Buscador/>
+    
+    <h1>Ejercicio 7</h1>
+    <AppCompras/>
     </>
+    
   );
 }
 export default App;
